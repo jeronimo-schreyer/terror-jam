@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu1a4301vinjk"]
+
+[ext_resource type="Script" uid="uid://clvecgpmr0bnq" path="res://objects/interactable_zone.gd" id="1_tmcn5"]
+
+[node name="InteractableZone" type="Node3D"]
+script = ExtResource("1_tmcn5")
+
+[node name="State" type="AnimationPlayer" parent="."]
+
+[node name="FocusArea" type="Area3D" parent="."]
+
+[node name="PlayerArea" type="Area3D" parent="."]
+
+[node name="HoldTimeout" type="Timer" parent="."]
+
+[node name="CooldownTimeout" type="Timer" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+
+[node name="InteractionKey" type="Button" parent="UI/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InteractionLabel" type="Label" parent="UI/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
